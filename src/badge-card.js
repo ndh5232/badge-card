@@ -72,7 +72,7 @@ export class BadgeCard extends LitElement {
 .search-container {
   position: absolute;
   top: 320px;
-  left: 380px;
+  left: 390px;
   z-index: 1;
 }
 
@@ -131,15 +131,30 @@ export class BadgeCard extends LitElement {
   padding: 10px;
   line-height: 1.5;
 }
+.tab-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 365px;
+  right: 750px;
+  z-index: 1;
+}
 
+.tab {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+}
 
-
-
-
-
-
-
-
+.tab.active {
+  background-color: #007bff;
+  color: #fff;
+}
     `;
   }
 
@@ -171,15 +186,13 @@ export class BadgeCard extends LitElement {
 <div class="badge-box">
   Looking for something brand spankin' new? Here are the most recently added badges!
 </div>
-
-
-
-
-
-
-
-
-
+<div class="tab-container">
+  <div class="tab active">All</div>
+  <div class="tab missions">Missions</div>
+  <div class="tab groups">Groups</div>
+  <div class="tab badges">Badges</div>
+  <div class="tab people">People</div>
+</div>
     `;
   }
 }
